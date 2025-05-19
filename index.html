@@ -1,182 +1,132 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sreyas</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!--Montserrat font-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
-  </head>
-  <body>   
-    <section>
-      <!-- MOBILE NAVIGATION -->
-      <div class="w3-container w3-padding-16 w3-border-bottom w3-hide-medium w3-hide-large">
-        <a href="#home" class="w3-bar-item w3-button w3-hover-none">CURRICULUM VITAE</a>
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleNavigation()">&#9776;</a>
-      </div>
-      <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-sticky">
-        <a href="#about" class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">ABOUT</a>
-        <a href="#resume" class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">RESUME</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">CONTACT</a>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV - Your Name</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
 
-      <!-- SOCIAL SECTION -->
-      <section class="image-section w3-quarter w3-fixed w3-padding-small">
-        <!--IMAGE/AVATAR-->
-        <img src="avatar.png" class="w3-circle w3-border w3-border-sand" style="border-width: 3px !important;"/>
-        <!--SCIAL NETWORK BUTTONS-->
-        <div class="links w3-margin-top w3-padding-small">
-          <a class="icon-link w3-text-sand w3-hover-text-amber" href="#facebook" target="_blank">
-              <i data-feather="facebook"></i>
-          </a>
-          <a class="icon-link w3-text-sand w3-hover-text-amber" href="https://www.instagram.com/" target="_blank">
-             <i data-feather="instagram"></i>
-          </a>
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 40px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
 
-          <a class="icon-link w3-text-sand w3-hover-text-amber" href="https://www.youtube.com/@VascoXD" target="_blank">
-             <i data-feather="youtube"></i>
-          </a>
-        </div>
-        <!--CV DOWNLOAD BUTTON-->
-        <div class="w3-container w3-padding-16">
-          <a href="https://limewire.com/d/zhjpm#iimqOmcdtA" class="w3-amber w3-hover-amber w3-button w3-round-small w3-hover-deep-orange w3-padding-large" target="_blank" download="resume.pdf">
-            <i data-feather="arrow-down" style="vertical-align: -0.35em;"></i>
-            <span class="w3-margin-left download-text">DOWNLOAD CV</span>
-          </a>
-        </div>
-      </section>
+    h1, h2, h3 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
 
-      <!--CV CONTENT SECTION-->
-      <section class="w3-threequarter w3-padding-large w3-right">
-        <!--DESKTOP NAVIGATION-->
-        <div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
-          <a href="#home" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green">CURRICULUM VITAE</a>
-          <a href="#contact" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">CONTACT</a>
-          <a href="#resume" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">RESUME</a>
-          <a href="#about" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">ABOUT</a>
-        </div>
-        <div class="content-container w3-margin-top-2">
-          <!--HOME SECTION-->
-          <div id="home" class="home w3-container w3-margin-top-4 w3-cursive">
-            <p style="font-style: italic; font-size:x-large;">"The mind is the limit. When you face your struggles, you overcome them."</p>
-            <h1>Sreyas(16)</h1>
-            <h2>Computer Science Student</h2>
-            <p></p>
-          </div>
+    h1 {
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
 
-          <!--ABOUT SECTION-->
-          <div id="about" class="w3-container w3-margin-top-20-percent w3-cursive w3-large">
-            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">ABOUT</h2>
-            <p class="w3-margin-top-2"> 
-              I am a passionate and driven individual with a strong interest in technology, digital media, and creative problem-solving. With a background in computer science and a growing skill set in programming, content creation, and community engagement, I thrive in environments that challenge me to learn and innovate.
-            </p>
-            <p class=""> 
-              My strengths lie in adaptability, communication, and a hands-on approach to tasks. I enjoy exploring new tools and platforms, whether it's for software development, editing, or design. I'm constantly seeking opportunities to improve myself, both personally and professionally, and I believe in consistent growth through dedication and curiosity.
-            </p>
-            <p class=""> 
-              Whether I'm coding a project, crafting visual content, or building a strategy, I always bring energy, focus, and a genuine passion for excellence.
-            </p>
-          </div>
+    .section {
+      margin-bottom: 30px;
+    }
 
-          <!--RESUME-->
-          <div id="resume" class="w3-container w3-margin-top-20-percent w3-cursive">
-            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">RESUME</h2>
-            <div class="w3-container w3-margin-top-2 w3-cursive">
+    .section p, .section ul {
+      margin: 0;
+      padding: 0;
+    }
 
-            <!---EDUCATION SECTION-->
-            <div class="w3-container w3-margin-top-2 w3-cursive">
-              <h3 class="w3-border-amber">MY EDUCATION</h3>
-                <h4>10th Pass</h4>
-                <p>April 2025</p>
-            </div>
+    .section ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
 
-            <!--SKILLS SECTION-->
-            <div class="w3-container w3-margin-top-2 w3-cursive">
-              <h3 class="w3-border-amber">MY SKILLS</h3>
-              <!--SOFT SKILLS-->
-              <h4>Soft skills</h4>
-              <ul class="w3-ul" style="font-weight: 500;">
-                <li>Problem-Solving</li>
+    .contact {
+      font-size: 0.95rem;
+    }
 
-                <li>• Communication</li>
+    .contact p {
+      margin: 5px 0;
+    }
 
-               <li>• Team Collaboration</li>
+    .highlight {
+      color: #3498db;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Your Name</h1>
 
-                <li>• Adaptability</li>
+    <div class="contact">
+      <p><strong>Email:</strong> your.email@example.com</p>
+      <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+      <p><strong>Location:</strong> City, State, Country</p>
+      <p><strong>GitHub:</strong> github.com/yourusername</p>
+    </div>
 
-                <li>• Creativity</li>
+    <div class="section">
+      <h2>Objective</h2>
+      <p>Motivated Computer Science student eager to apply technical and analytical skills to real-world projects and challenges. Looking for opportunities to grow and contribute to innovative solutions.</p>
+    </div>
 
-                <li>• Time Management</li>
+    <div class="section">
+      <h2>Education</h2>
+      <p><strong>Higher Secondary Education (Plus Two)</strong><br/>
+      Stream: Computer Science<br/>
+      School Name – Year of completion</p>
 
-                <li>• Critical Thinking</li>
-              </ul>
-              <!--TECHNICAL SKILLS-->
-              <h4>Technical skills</h4>
-                <ul class="w3-ul" style="font-weight: 500;">
-                  <li>• Programming: HTML, CSS, Python (beginner), JavaScript (basic)</li>
+      <p><strong>SSLC</strong><br/>
+      School Name – Year of completion – Percentage / Grade</p>
+    </div>
 
-                  <li>• Tools: Git & GitHub, Filmora, Visual Studio Code, VirtualBox</li>
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Programming: C, Python, HTML, CSS, JavaScript (Basic)</li>
+        <li>Tools: Git, Visual Studio Code</li>
+        <li>Platforms: Windows, Linux (Kali, Ubuntu)</li>
+      </ul>
+    </div>
 
-                  <li>• Platforms: Windows, macOS, Kali Linux (Virtualized)</li>
+    <div class="section">
+      <h2>Projects</h2>
+      <p><strong>Personal Portfolio Website</strong> – Built using HTML and CSS<br/>
+      Hosted on GitHub Pages with a custom domain</p>
 
-                  <li>• Web Development Basics: Static web design, GitHub Pages hosting</li>
+      <p><strong>Arduino-based Project</strong> – Controlled with PictoBlox</p>
+    </div>
 
-                  <li>• Editing: Video editing, Basic graphic design</li>
+    <div class="section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Ethical Hacking Basics – Platform Name</li>
+        <li>HTML/CSS Beginner Course – Platform Name</li>
+      </ul>
+    </div>
 
-                  <li>• Cybersecurity: Basic knowledge of ethical hacking (Kali Linux)</li>
+    <div class="section">
+      <h2>Languages</h2>
+      <ul>
+        <li>English – Fluent</li>
+        <li>Malayalam – Native</li>
+        <li>Hindi – Basic</li>
+      </ul>
+    </div>
 
-                  <li>• Game Knowledge: Deep familiarity with game mechanics, modding (Skyrim, Minecraft, etc.)</li>
-                </ul>
-            </div>
-
-            <!--INTERESTS SECTION-->
-            <div class="w3-container w3-margin-top-2 w3-cursive">
-              <h3 class="w3-border-amber">MY HOBBIES AND INTERESTS</h3>
-                <ul class="w3-ul" style="font-weight: 500;">
-                  <li>I love Gaming and Reading in my free time</li>
-                  </ul>
-            </div>
-
-          <!--CONTACT SECTION-->
-          <div id="contact" class="w3-container w3-margin-top-20-percent w3-cursive">
-            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">MY CONTACT DETAILS</h3>
-            <div class="w3-margin-top-2" style="font-weight: 500;">
-              <p>Name: Sreyas</p>
-              <p>Adress: Sreepadam, Chunakkara P.O, Alappuzha</p>
-              <p>Phone number: +91 8301979395</p>
-              <p>E-mail: sreyassnair76@gmail.com</p>
-            </div>
-          </div>
-
-        <!--FOOTER-->
-        <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
-        <footer class="w3-container w3-border-top w3-center w3-margin-top-4">
-          <p>© 2025 - Sreyas</p>
-        </footer>
-
-        <!--END OF CV SECTION-->
-      </section>      
-    </section>
-    <script>
-      // Function to toggle mobile navigation
-      function toggleNavigation() {
-        let nav = document.getElementById("mobile-nav");
-        if (nav.classList.contains('w3-show')) {
-          nav.classList.remove('w3-show');
-        } else { 
-          nav.classList.add('w3-show');
-        }
-      }
-    </script>
-    <script>
-      // Script to load feather icons
-      feather.replace()
-    </script>
-  </body>
+    <div class="section">
+      <h2>Hobbies & Interests</h2>
+      <ul>
+        <li>Gaming (FPS, RPG, Action-Adventure)</li>
+        <li>Video Editing & YouTube Content Creation</li>
+        <li>Learning Cybersecurity & Ethical Hacking</li>
+      </ul>
+    </div>
+  </div>
+</body>
 </html>
